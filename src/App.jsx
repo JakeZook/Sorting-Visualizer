@@ -9,7 +9,6 @@ function App() {
 				<Route path="/" element={<Sorting />} />
 				<Route path="/sorter" element={<Sorting />} />
 				<Route path="/pathfinder" element={<Pathfinding />} />
-				<Route path="/searcher" element={<Searching />} />
 			</Routes>
 		</Router>
 	);
