@@ -1,6 +1,7 @@
 # Algorithm Visualizer
 
 A source of information to better understand sorting algorithms.
+- [Deployed Project](https://visualizerjz.netlify.app)
 
 ## Features
 
