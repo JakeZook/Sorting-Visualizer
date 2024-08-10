@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
 	mergeSort,
 	bubbleSort,
@@ -28,6 +29,12 @@ const Sorting = () => {
 	const [isFinalTransition, setIsFinalTransition] = useState(false);
 	const [maxArraySize, setMaxArraySize] = useState(100);
 	const [algData, setAlgData] = useState(data.find((d) => d.name === "Bubble"));
+
+	const navigate = useNavigate();
+
+	const handleLinkClick = (path) => () => {
+		navigate(path);
+	};
 
 	useEffect(() => {
 		const updateMaxArraySize = () => {
@@ -131,8 +138,14 @@ const Sorting = () => {
 	return (
 		<div className="App p-6 text-center h-screen">
 			<h1 className="text-2xl font-bold mb-4 text-red-500">
-				Algorithm Visualizer
+				Sorting Algorithm Visualizer
 			</h1>
+			<button
+				className="btn btn-sm bg-blue-500 text-md text-nowrap text-white hover:bg-blue-800 hover:scale-105 mb-4 mx-4 w-40"
+				onClick={handleLinkClick("/")}
+			>
+				Home
+			</button>
 			<div className="flex justify-center mb-16 max-md:flex-col-reverse items-center max-md:mb-12">
 				<div className="flex flex-col items-center max-md:mt-8">
 					<button

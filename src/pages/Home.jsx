@@ -9,11 +9,31 @@ const Home = () => {
 	};
 
 	return (
-		<div>
-			<h1>Home</h1>
-			<button onClick={handleClick("/sorter")}>Sort</button>
-			<button onClick={handleClick("/pathfinder")}>Path</button>
-			<button onClick={handleClick("/searcher")}>Search</button>
+		<div className="flex justify-center flex-col items-center">
+			<div className="p-12 flex flex-col justify-center items-center">
+				<h1 className="text-5xl text-red-500">Algorithm Visualizer</h1>
+				<h2 className="text-white text-2xl">Jake Zook</h2>
+			</div>
+			<div className="flex flex-col">
+				<button
+					className="btn btn-lg bg-blue-500 text-white my-5 hover:bg-blue-700 hover:scale-110"
+					onClick={handleClick("/sorter")}
+				>
+					Sorting Algorithms
+				</button>
+				<button
+					className="btn btn-lg bg-green-500 text-white my-5 hover:bg-green-700 hover:scale-110"
+					onClick={handleClick("/searcher")}
+				>
+					Searching Algorithms
+				</button>
+				<button
+					className="btn btn-lg bg-red-500 text-white my-5 hover:bg-red-700 hover:scale-110"
+					onClick={handleClick("/pathfinder")}
+				>
+					Path Finding Algorithms
+				</button>
+			</div>
 		</div>
 	);
 };

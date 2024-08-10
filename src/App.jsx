@@ -6,8 +6,9 @@ function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/" element={<Sorting />} />
+				<Route path="/" element={<Home />} />
 				<Route path="/sorter" element={<Sorting />} />
+				<Route path="/searcher" element={<Searching />} />
 				<Route path="/pathfinder" element={<Pathfinding />} />
 			</Routes>
 		</Router>

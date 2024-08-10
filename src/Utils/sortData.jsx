@@ -203,6 +203,206 @@ const data = [
 			"Continue until all elements are sorted.",
 		],
 	},
+	{
+		name: "Linear",
+		desc: "Linear Search is a simple search algorithm that sequentially checks each element in a list until a match is found or the whole list has been searched.",
+		time: [
+			{
+				name: "Best",
+				value: "O(1)",
+				desc: "When the target element is the first element in the list, Linear Search requires only one comparison.",
+			},
+			{
+				name: "Average",
+				value: "O(n)",
+				desc: "For most lists, Linear Search requires checking each element in the list until the target element is found.",
+			},
+			{
+				name: "Worst",
+				value: "O(n)",
+				desc: "When the target element is the last element in the list or not in the list, Linear Search requires checking each element in the list.",
+			},
+		],
+		space: [
+			{
+				name: "Auxiliary",
+				value: "O(1)",
+				desc: "Linear Search requires only a constant amount of extra space beyond the input list.",
+			},
+		],
+		steps: [
+			"Start from the first element in the list.",
+			"Compare the target element with the current element.",
+			"Repeat until the target element is found or the end of the list is reached.",
+		],
+		exampleArray: "[3, 7, 2, 8, 1, 4, 5, 6]",
+		example: [
+			"Check if 3 is the target element.",
+			"Check if 7 is the target element.",
+			"Continue until the target element is found or the end of the list is reached.",
+		],
+	},
+	{
+		name: "Binary",
+		desc: "Binary Search is a search algorithm that finds the position of a target element within a sorted list. It compares the target element with the middle element of the list and eliminates half of the remaining elements at each step.",
+		time: [
+			{
+				name: "Best",
+				value: "O(1)",
+				desc: "When the target element is the middle element in the list, Binary Search requires only one comparison.",
+			},
+			{
+				name: "Average",
+				value: "O(log n)",
+				desc: "For most sorted lists, Binary Search requires a logarithmic number of comparisons to find the target element.",
+			},
+			{
+				name: "Worst",
+				value: "O(log n)",
+				desc: "When the target element is not in the list, Binary Search requires a logarithmic number of comparisons to determine its absence.",
+			},
+		],
+		space: [
+			{
+				name: "Auxiliary",
+				value: "O(1)",
+				desc: "Binary Search requires only a constant amount of extra space beyond the input list.",
+			},
+		],
+		steps: [
+			"Start with the entire sorted list.",
+			"Compare the target element with the middle element of the list.",
+			"Eliminate the half of the list that does not contain the target element.",
+			"Repeat until the target element is found or the list is empty.",
+		],
+		exampleArray: "[1, 2, 3, 4, 5, 6, 7, 8]",
+		example: [
+			"Check if 4 is the target element.",
+			"Eliminate the half of the list that does not contain 4: [5, 6, 7, 8].",
+			"Check if 4 is the target element.",
+			"Continue until the target element is found or the list is empty.",
+		],
+	},
+	{
+		name: "Jump",
+		desc: "Jump Search is a search algorithm that finds the position of a target element within a sorted list. It jumps ahead by a fixed number of steps and then performs a linear search to find the target element.",
+		time: [
+			{
+				name: "Best",
+				value: "O(1)",
+				desc: "When the target element is the first element in the list, Jump Search requires only one comparison.",
+			},
+			{
+				name: "Average",
+				value: "O(√n)",
+				desc: "For most sorted lists, Jump Search requires a square root number of comparisons to find the target element.",
+			},
+			{
+				name: "Worst",
+				value: "O(√n)",
+				desc: "When the target element is not in the list, Jump Search requires a square root number of comparisons to determine its absence.",
+			},
+		],
+		space: [
+			{
+				name: "Auxiliary",
+				value: "O(1)",
+				desc: "Jump Search requires only a constant amount of extra space beyond the input list.",
+			},
+		],
+		steps: [
+			"Start with the first element in the list.",
+			"Jump ahead by a fixed number of steps.",
+			"Perform a linear search to find the target element.",
+			"Repeat until the target element is found or the end of the list is reached.",
+		],
+		exampleArray: "[1, 2, 3, 4, 5, 6, 7, 8]",
+		example: [
+			"Jump ahead by 2 steps and perform a linear search to find 4.",
+			"Continue until the target element is found or the end of the list is reached.",
+		],
+	},
+	{
+		name: "Interpolation",
+		desc: "Interpolation Search is a search algorithm that finds the position of a target element within a sorted list. It estimates the position of the target element based on the values of the first and last elements in the list.",
+		time: [
+			{
+				name: "Best",
+				value: "O(1)",
+				desc: "When the target element is the first element in the list, Interpolation Search requires only one comparison.",
+			},
+			{
+				name: "Average",
+				value: "O(log log n)",
+				desc: "For most sorted lists, Interpolation Search requires a double logarithmic number of comparisons to find the target element.",
+			},
+			{
+				name: "Worst",
+				value: "O(n)",
+				desc: "When the target element is not in the list, Interpolation Search requires checking each element in the list.",
+			},
+		],
+		space: [
+			{
+				name: "Auxiliary",
+				value: "O(1)",
+				desc: "Interpolation Search requires only a constant amount of extra space beyond the input list.",
+			},
+		],
+		steps: [
+			"Estimate the position of the target element based on the values of the first and last elements in the list.",
+			"Compare the target element with the estimated position.",
+			"Eliminate the half of the list that does not contain the target element.",
+			"Repeat until the target element is found or the list is empty.",
+		],
+		exampleArray: "[1, 2, 3, 4, 5, 6, 7, 8]",
+		example: [
+			"Estimate the position of 4 based on the values of 1 and 8.",
+			"Eliminate the half of the list that does not contain 4: [5, 6, 7, 8].",
+			"Check if 4 is the target element.",
+			"Continue until the target element is found or the list is empty.",
+		],
+	},
+	{
+		name: "Ternary",
+		desc: "Ternary Search is a search algorithm that finds the position of a target element within a sorted list. It divides the list into three parts and determines which part contains the target element.",
+		time: [
+			{
+				name: "Best",
+				value: "O(1)",
+				desc: "When the target element is the middle element in the list, Ternary Search requires only one comparison.",
+			},
+			{
+				name: "Average",
+				value: "O(log n)",
+				desc: "For most sorted lists, Ternary Search requires a logarithmic number of comparisons to find the target element.",
+			},
+			{
+				name: "Worst",
+				value: "O(log n)",
+				desc: "When the target element is not in the list, Ternary Search requires a logarithmic number of comparisons to determine its absence.",
+			},
+		],
+		space: [
+			{
+				name: "Auxiliary",
+				value: "O(1)",
+				desc: "Ternary Search requires only a constant amount of extra space beyond the input list.",
+			},
+		],
+		steps: [
+			"Divide the list into three parts.",
+			"Compare the target element with the elements at the two dividing points.",
+			"Determine which part contains the target element.",
+			"Repeat until the target element is found or the list is empty.",
+		],
+		exampleArray: "[1, 2, 3, 4, 5, 6, 7, 8]",
+		example: [
+			"Divide the list into three parts: [1, 2], [3, 4], [5, 6, 7, 8].",
+			"Determine which part contains 4: [3, 4].",
+			"Continue until the target element is found or the list is empty.",
+		],
+	},
 ];
 
 export { data };
