@@ -11,8 +11,10 @@ const Home = () => {
 	return (
 		<div className="flex justify-center flex-col items-center">
 			<div className="p-12 flex flex-col justify-center items-center">
-				<h1 className="text-5xl text-red-500">Algorithm Visualizer</h1>
-				<h2 className="text-white text-2xl">Jake Zook</h2>
+				<h1 className="text-5xl text-center text-red-500">
+					Algorithm Visualizer
+				</h1>
+				<h2 className="text-white text- pt-4 text-2xl">Jake Zook</h2>
 			</div>
 			<div className="flex flex-col">
 				<button

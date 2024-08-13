@@ -17,7 +17,7 @@ const Pathfinding = () => {
 	const [path, setPath] = useState([]);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [canStart, setCanStart] = useState(false);
-	const [speed, setSpeed] = useState(500);
+	const [speed, setSpeed] = useState(100);
 	const [algData, setAlgData] = useState(data.find((d) => d.name === "A*"));
 
 	const navigate = useNavigate();
@@ -181,7 +181,7 @@ const Pathfinding = () => {
 					<input
 						type="range"
 						min="50"
-						max="1000"
+						max="500"
 						step="10"
 						value={speed}
 						onChange={handleSpeedChange}
