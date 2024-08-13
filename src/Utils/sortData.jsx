@@ -403,6 +403,49 @@ const data = [
 			"Continue until the target element is found or the list is empty.",
 		],
 	},
+	{
+		name: "A*",
+		desc: "A* Search is an informed search algorithm that uses a heuristic to estimate the cost of reaching the goal from a given node. It maintains two sets of nodes: the open set and the closed set.",
+		time: [
+			{
+				name: "Best",
+				value: "O(1)",
+				desc: "When the goal is the start node, A* Search requires only one comparison.",
+			},
+			{
+				name: "Average",
+				value: "O(b^d)",
+				desc: "For most graphs, A* Search requires a branching factor raised to the depth of the solution.",
+			},
+			{
+				name: "Worst",
+				value: "O(b^d)",
+				desc: "When the goal is at the maximum depth, A* Search requires the maximum branching factor raised to the depth of the solution.",
+			},
+		],
+		space: [
+			{
+				name: "Auxiliary",
+				value: "O(b^d)",
+				desc: "A* Search requires additional space for the open set, closed set, and the path to the goal.",
+			},
+		],
+		steps: [
+			"Add the start node to the open set.",
+			"Initialize the gScore and fScore for each node.",
+			"Select the node with the lowest fScore from the open set.",
+			"If the selected node is the goal, reconstruct the path.",
+			"Expand the selected node and update the open set and closed set.",
+			"Repeat until the open set is empty or the goal is found.",
+		],
+		exampleArray: "Graph",
+		example: [
+			"Add the start node to the open set.",
+			"Select the node with the lowest fScore from the open set.",
+			"Expand the selected node and update the open set and closed set.",
+			"Repeat until the open set is empty or the goal is found.",
+		],
+	},
 ];
 
 export { data };

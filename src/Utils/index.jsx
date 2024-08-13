@@ -10,6 +10,8 @@ import { jumpSearch } from "./Jump";
 import { interpolationSearch } from "./Interpolation";
 import { ternarySearch } from "./Ternary";
 
+import { aStar } from "./AStar";
+
 import { data } from "./sortData";
 import { bubbleSortSearch } from "./BubbleForSearch";
 
@@ -25,5 +27,6 @@ export {
 	interpolationSearch,
 	ternarySearch,
 	bubbleSortSearch,
+	aStar,
 	data,
 };
