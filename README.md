@@ -5,12 +5,21 @@ A source of information to better understand sorting algorithms.
 
 ## Features
 
-- Bubble Sort
-- Merge Sort
-- Quick Sort
-- Insertion Sort
-- Selection Sort
-- More algorithms to come!
+- Sorting
+  - Bubble
+  - Megre
+  - Insertion
+  - Quick
+  - Selection
+- Searching
+  - Linear
+  - Binary
+  - Jump
+  - Interpolation
+  - Ternary
+- Pathfinding
+  - A*     
+
 
 ## Authors
 
